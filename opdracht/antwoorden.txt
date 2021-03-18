@@ -3,7 +3,7 @@
 
 2.SELECT r.name, drivers.surname, driver_standing.points from races r LEFT JOIN driver_standing ON driver_standing.raceId = r.raceId LEFT JOIN drivers ON driver_standing.driverId = drivers.driverId WHERE r.year = 2017 AND driver_standing.points = 10
 
-3.SELECT d.forename , d.surname, pitstops.duration from drivers d RIGHT JOIN pitstops ON d.driverId = pitstops.driverId WHERE pitstops.milliseconds < 25000
+3.SELECT drivers.forename, drivers.surname, pitstops.duration from drivers LEFT join pitstops on drivers.driverId = pitstops.driverId WHERE pitstops.milliseconds < 25000
 
 4.SELECT constructors.name'constructor' , races.name'GrandPrix' from races left join constructors on races.circuitId = races.circuitId WHERE constructors.name = 'McLaren'
 
@@ -19,3 +19,16 @@ MAAK EEN OVERZICHT MET DE PITSTOPS DE URL EN DE DURATION
 
 
 3.
+
+
+
+onzin
+
+1. INSERT INTO `studenten2`(`student_id`, `voornaam`, `achternaam`, `klas`, `adres`, `postcode`, `geboortedatum`, `woonplaats`) VALUES (11,'safak','akkurt',4,'villastraat',10044 , 18/12/200,'new')
+
+
+2. UPDATE studenten2 SET voornaam = 'micheal' WHERE student_id=7
+
+
+
+3. SELECT game.name , genre.genre from game left join genre on game.genre_id = genre.id
